@@ -1,17 +1,21 @@
+// select all "fCheckbox", "iCheckbox" and "checklist" class
 const fCheckbox = document.querySelectorAll(".fCheckbox");
 const iCheckbox = document.querySelectorAll(".iCheckbox");
 const checklist = document.querySelectorAll(".checklist");
 
-fCheckbox.forEach((element, i) => {
+// looping "fCheckbox" for manipulate checkbox
+fCheckbox.forEach((element, index) => {
     element.addEventListener("click", () => {
-        if (checklist[i].classList.contains("opacity-0")) {
-            checklist[i].classList.remove("opacity-0");
-            iCheckbox[i].checked = true;
-            console.log("🚀 ~ fCheckbox.addEventListener ~ iCheckbox[i].checked:", iCheckbox[i].checked);
+        // check if checkbox while un-checked or checked by existence "opacity-0" class
+        if (checklist[index].classList.contains("opacity-0")) {
+            element.classList.add("bg-basic");
+            checklist[index].classList.remove("opacity-0");
+            checklist[index].style.transition = "all 400ms";
+            iCheckbox[index].checked = true;
         } else {
-            checklist[i].classList.add("opacity-0");
-            iCheckbox[i].checked = false;
-            console.log("🚀 ~ fCheckbox.addEventListener ~ iCheckbox[i].checked:", iCheckbox[i].checked);
+            element.classList.remove("bg-basic");
+            checklist[index].classList.add("opacity-0");
+            iCheckbox[index].checked = false;
         }
     });
 });
