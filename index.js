@@ -1,13 +1,9 @@
 import express from "express";
 import axios from "axios";
-import dotenv from "dotenv";
 import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
-
-// configure dotenv (.env)
-dotenv.config();
 
 // configure body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,6 +13,9 @@ const API_Weather = "https://api.openweathermap.org/data/2.5/weather?id=1640344"
 const API_Quotes = "https://dummyjson.com/quotes/random/";
 const API_Recipes = "https://dummyjson.com/recipes/";
 const API_Todo = "https://dummyjson.com/todos/";
+
+// variable "API_Key" for authorization
+const API_Key = "3c8cfc2bf59d20b0cc3b7d5158c182b0";
 
 // make public as serving static file
 app.use(express.static("public"));
@@ -32,7 +31,7 @@ app.get("/", (req, res) => {
     });
 
     // make multiple concurrent requests APIs
-    Promise.all([axios.get(`${API_Weather}&appid=${process.env.OPENWEATHER_API_KEY}`), axios.get(`${API_Quotes}`), ...recipeRequests, axios.get(`${API_Todo}random/3`)]).then(function (responses) {
+    Promise.all([axios.get(`${API_Weather}&appid=${API_Key}`), axios.get(`${API_Quotes}`), ...recipeRequests, axios.get(`${API_Todo}random/3`)]).then(function (responses) {
         // // insert data "responses" to frontend
         res.render("index.ejs", { contents: responses });
     });
