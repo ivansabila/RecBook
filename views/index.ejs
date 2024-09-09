@@ -31,13 +31,14 @@
                 </div>
             </div>
             <div class="flex flex-col gap-2">
-                <p class="text-whiteBase tracking-wide font-medium">Recipe of breakfast</p>
+                <p class="text-whiteBase tracking-wide font-medium">Recommended menu</p>
                 <div class="flex gap-2">
-                    <div class="recipe flex-1 line-clamp-1 text-sm leading-7 py-1 px-4 rounded-lg text-basic font-medium bg-secondary transition-all duration-500 hover:opacity-70 hover:leading-7 hover:text-sm hover:cursor-pointer" data-recipe="<%= JSON.stringify(contents[2].data) %>" title="<%= contents[2].data.name %>"><%= contents[2].data.name %></div>
-                    <div class="recipe flex-1 line-clamp-1 text-sm leading-7 py-1 px-4 rounded-lg text-slate-300 font-medium bg-primary transition-all duration-500 hover:opacity-70 hover:leading-7 hover:text-sm hover:cursor-pointer" data-recipe="<%= JSON.stringify(contents[3].data) %>" title="<%= contents[3].data.name %>"><%= contents[3].data.name %></div>
-                    <div class="recipe flex-1 line-clamp-1 text-sm leading-7 py-1 px-4 rounded-lg text-slate-300 font-medium bg-primary transition-all duration-500 hover:opacity-70 hover:leading-7 hover:text-sm hover:cursor-pointer" data-recipe="<%= JSON.stringify(contents[4].data) %>" title="<%= contents[4].data.name %>"><%= contents[4].data.name %></div>
+                    <div class="recipe flex-1 line-clamp-1 text-sm leading-7 py-1 px-4 rounded-lg text-slate-300 font-medium bg-primary transition-all duration-500 hover:bg-secondary hover:text-basic hover:leading-7 hover:text-sm hover:cursor-pointer" data-recipe="<%= JSON.stringify(contents[2].data) %>" title="<%= contents[2].data.name %>"><%= contents[2].data.name %></div>
+                    <div class="recipe flex-1 line-clamp-1 text-sm leading-7 py-1 px-4 rounded-lg text-slate-300 font-medium bg-primary transition-all duration-500 hover:bg-secondary hover:text-basic hover:leading-7 hover:text-sm hover:cursor-pointer" data-recipe="<%= JSON.stringify(contents[3].data) %>" title="<%= contents[3].data.name %>"><%= contents[3].data.name %></div>
+                    <div class="recipe flex-1 line-clamp-1 text-sm leading-7 py-1 px-4 rounded-lg text-slate-300 font-medium bg-primary transition-all duration-500 hover:bg-secondary hover:text-basic hover:leading-7 hover:text-sm hover:cursor-pointer" data-recipe="<%= JSON.stringify(contents[4].data) %>" title="<%= contents[4].data.name %>"><%= contents[4].data.name %></div>
                 </div>
             </div>
+            <p class="text-whiteBase tracking-wide font-medium">Recommended todo's</p>
             <div class="flex flex-col rounded-lg bg-secondary p-6 gap-3 relative">
                 <div class="todo flex justify-between items-center gap-2 group">
                     <div class="flex gap-3 items-center">

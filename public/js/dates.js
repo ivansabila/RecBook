@@ -13,6 +13,9 @@ const month = ["January", "February", "March", "April", "May", "June", "July", "
 // insert data to frontend
 monthYear.innerText = `${month[dates.getMonth()]} ${dates.getFullYear()}`;
 
+//test
+console.log(dates.getHours());
+
 // make variable "dateNow" for get weekday (0-6)
 let dateNow = dates.getDay();
 
